@@ -1,0 +1,121 @@
+body {
+  background-color: rgba(13,133,237,.1);
+}
+img {
+  width: 120%;
+}
+
+.wave2-container{
+  transform: translate(-100px, -60px);
+}
+.wave1-container{
+  transform: translate(-100px, 0px);
+}
+
+.wave3-container{
+  transform: translate(-100px, -120px);
+}
+
+#waves1 {
+  animation: waveMotion 5s linear infinite;
+}
+
+#waves2 {
+  animation: waveMotion 15s linear infinite;
+}
+
+#waves3 {
+  animation: waveMotion 6s linear infinite;
+}
+
+@keyframes waveMotion {
+  0% {
+      transform: translate(0px, 0px);
+    }
+  8% {
+      transform: translate(15px, -1px);
+    }
+  16% {
+    transform: translate(30px, -3px);
+  }
+  25% {
+    transform: translate(45px, -5px);
+  }
+  27% {
+    transform: translate(45px, -5px);
+  }
+  34% {
+    transform: translate(60px, -3px);
+  }
+  42% {
+    transform: translate(75px, -1px);
+  }
+  50% {
+    transform: translate(90px, 0px);
+  }
+  58% {
+     transform: translate(75px, 1px);
+  }
+  66% {
+     transform: translate(60px, 3px);
+  }
+  75% {
+     transform: translate(45px, 5px);
+  }
+  84% {
+     transform: translate(30px, 3px);
+  }
+  92% {
+     transform: translate(15px, 1px);
+  }
+  100% {
+      transform: translate(0px, 0px);
+  }
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.board {
+  height: 800px;
+  width: 800px;
+  /*border: 2px solid green;*/
+  display: flex;
+  flex-direction: column;
+}
+
+.numbers {
+  /*border: 2px solid yellow;*/
+  display: flex;
+  height: 70px;
+}
+
+.num-label, .alpha-label {
+  width: 70px;
+  height: 70px;
+  border: 2px solid lightblue;
+  background-color: rgba(10,50,100,.5);
+}
+
+.blank {
+  background-color: rgba(0,0,0,0);
+  border-left: none;
+  border-top: none;
+}
+
+.row {
+  /*border: 2px solid pink;*/
+  height: 70px;
+  display: flex;
+}
+
+.square {
+  height: 70px;
+  width: 70px;
+  border: 2px solid lightblue;
+  background-color: rgba(10,50,100,1);
+  cursor: pointer;
+}
