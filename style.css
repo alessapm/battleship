@@ -1,6 +1,17 @@
 body {
   background-color: rgba(13,133,237,.1);
+  font-family: 'Aldrich', sans-serif;
 }
+
+.intro {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.intro p {
+    margin-bottom: 50px;
+}
+
 img {
   width: 120%;
 }
@@ -90,14 +101,17 @@ img {
 .numbers {
   /*border: 2px solid yellow;*/
   display: flex;
-  height: 70px;
+  height: 60px;
 }
 
 .num-label, .alpha-label {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border: 2px solid lightblue;
   background-color: rgba(10,50,100,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blank {
@@ -108,13 +122,13 @@ img {
 
 .row {
   /*border: 2px solid pink;*/
-  height: 70px;
+  height: 60px;
   display: flex;
 }
 
 .square {
-  height: 70px;
-  width: 70px;
+  height: 60px;
+  width: 60px;
   border: 2px solid lightblue;
   background-color: rgba(10,50,100,1);
   cursor: pointer;
