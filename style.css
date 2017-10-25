@@ -116,8 +116,8 @@ img {
 
 .blank {
   background-color: rgba(0,0,0,0);
-  border-left: none;
-  border-top: none;
+  border-left: 2px solid rgba(0,0,0,0);
+  border-top: 2px solid rgba(0,0,0,0);
 }
 
 .row {
@@ -133,3 +133,8 @@ img {
   background-color: rgba(10,50,100,1);
   cursor: pointer;
 }
+
+.inactive {
+  pointer-events: none;
+}
+
