@@ -84,15 +84,32 @@ img {
   }
 }
 
+
+@keyframes missileMotion {
+  0% {
+    visibility: hidden;
+    transform: translate(-800px, -800px);
+  }
+  5% {
+    visibility: visible;
+  }
+  75% {
+    transform: translate(0px,0px);
+  }
+
+}
+
+
 .main {
   width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .board {
-  height: 800px;
-  width: 800px;
+  height: 750px;
+  width: 750px;
   /*border: 2px solid green;*/
   display: flex;
   flex-direction: column;
@@ -138,3 +155,16 @@ img {
   pointer-events: none;
 }
 
+
+.missile-container {
+  transform: translate(-150px, -750px);
+  height: 0px;
+}
+
+.hit {
+  visibility: hidden;
+}
+
+.missile {
+  animation: missileMotion .7s linear;
+}

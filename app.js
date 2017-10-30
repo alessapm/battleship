@@ -54,7 +54,9 @@ $.each(gameSquares, (index, square) => {
 
 
 const checkForFleetDestruction = () => {
-
+  if (numShipsDestroyed >= 5){
+    alert('Victory! Enemy fleet is destroyed!')
+  }
 }
 
 
@@ -70,10 +72,13 @@ const checkIfShipLocation = (id) => {
     for (let x in shipLocations) {
     // console.log(shipLocations[x].locations)
     let locationArray = shipLocations[x].locations;
-
     if (locationArray.includes(id)){
       let newArr = locationArray.splice(locationArray.indexOf(id), 1);
-      checkForShipDestruction(x)
+      $('.hit').addClass('missile');
+      setTimeout( () => {
+        $('.hit').removeClass('missile');
+      }, 1000)
+      checkForShipDestruction(x);
       return true
     }
   }
@@ -89,12 +94,9 @@ gameSquares.click((e) => {
   //if yes, changes background color to red and border to yellow
   //if no, changes background to gray.
   activeSquare.addClass('inactive');
-
+  // $('.hit').removeClass('missile');
   checkIfShipLocation(squareId) ? activeSquare.css('background-color', 'red') : activeSquare.css('background-color', '#4A4742')
 
-  console.log('**', shipLocations)
-
-  // on click it should change the UI and mark it as guessed.
 
 })
 
