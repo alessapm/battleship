@@ -62,7 +62,7 @@ const checkForFleetDestruction = () => {
 
 const checkForShipDestruction = (ship) => {
   if (shipLocations[ship].locations.length === 0) {
-    alert('ship destroyed');
+    setTimeout(() => { alert('ship destroyed')}, 1000)
     numShipsDestroyed++
   }
 }
